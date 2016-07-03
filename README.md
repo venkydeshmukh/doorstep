@@ -6,12 +6,12 @@ Please install nodejs, mongodb
 Start mongod
 Run the following commands in command prompt
 
-npm install -g grunt-cli bower
-npm install (Install all nodejs dependencies)
-bower install (Automatically installs all bower dependencies)
-grunt serve (Starts the application in development mode)
+1. npm install -g grunt-cli bower
+2. npm install (Install all nodejs dependencies)
+3. bower install (Automatically installs all bower dependencies)
+4. grunt serve (Starts the application in development mode)
 
-grunt serve:dist --force (--- Optional --- This will generate the code for production/distribution)
+5. grunt serve:dist --force (--- Optional --- This will generate the code for production/distribution)
 The code is placed inside the dist directory
 
 # Coding standards
@@ -22,7 +22,7 @@ The code is placed inside the dist directory
 
 
 # Features
-### Store Front features
+### Sample features
 *  Single page web app (SPA) created using AngularJS, NodeJS, Express, MongoDB (MEAN)
 *  Different  Merchants can setup their shops
 * User have access to all shops. 
