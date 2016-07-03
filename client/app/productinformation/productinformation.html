@@ -1,0 +1,76 @@
+<link href="../site/site.css" rel="stylesheet">
+<!-- Edit profile -->
+
+<div class="items">
+  <div class="container">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <div class="col-md-3 col-sm-3 hidden-xs">
+
+        <h5 class="title">Pages</h5>
+        <!-- Sidebar navigation -->
+          <nav>
+            <ul id="navi">
+              <li><a href="#" ng-click="visible('categoryInformation')">Categories</a></li>
+              <li><a href="#" ng-click="visible('brandInformation')">Brands</a></li>
+              <li><a href="#" ng-click="visible('featureInformation')">Features</a></li>
+              <li><a href="#" ng-click="visible('couponInformation')">Coupons</a></li>
+            </ul>
+          </nav>
+
+      </div>
+
+      <!-- Main bar General-->
+      <div class="col-md-9 col-sm-9" >
+	<!-- Category information -->
+	<div id="categoryInformation" class="invisibletab">
+          <h5 class="title">Categories</h5>
+
+          <div class="crudtables">
+          <crud-table api='Category' merchant='{{User.merchantId}}' cols='[{"name":"text"},{"info":"text"},{"category":"number"},{"parentCategory":"number"},{"active":"boolean"}]'></crud-table>
+		</div>
+	</div>
+	<!-- Category information End-->
+
+
+<!-- Brand information -->
+	<div id="brandInformation" class="invisibletab">
+          <h5 class="title">Brands</h5>
+
+          <div class="crudtables">
+         <crud-table api='Brand' merchant='{{User.merchantId}}' cols='[{"name":"text"},{"info":"text"},{"image":"text"},{"active":"boolean"}]'></crud-table>
+		</div>
+	</div>
+	<!-- Brand information End-->
+
+<!-- Coupon information -->
+	<div id="couponInformation" class="invisibletab">
+          <h5 class="title">Coupons</h5>
+
+          <div class="crudtables">
+           <crud-table api='Coupon' merchant='{{User.merchantId}}' cols='[{"code":"text"},{"amount":"currency"},{"minimumCartValue":"currency"},{"info":"text"},{"type":"text"},{"active":"boolean"}]'></crud-table>
+		</div>
+	</div>
+	<!-- Coupon information End-->
+
+
+<!-- Feature information -->
+	<div id="featureInformation" class="invisibletab" >
+          <h5 class="title">Features</h5>
+
+          <div class="crudtables">
+           <crud-table api='Feature' merchant='{{User.merchantId}}' cols='[{"key":"text"},{"val":"text"},{"active":"boolean"}]'></crud-table>
+		</div>
+	</div>
+	<!-- Features information End-->
+
+
+      </div>                                                                    
+<!-- General information End-->
+
+    </div>
+  </div>
+</div>
+
+

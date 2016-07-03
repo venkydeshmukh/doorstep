@@ -1,0 +1,199 @@
+<link href="site.css" rel="stylesheet">
+<link rel="stylesheet" media="screen" type="text/css" href="colorpicker.css" />
+<script type="text/javascript" src="colorpicker.js"></script>
+<!-- Edit profile -->
+
+<div class="items">
+  <div class="container">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <div class="col-md-3 col-sm-3 hidden-xs">
+
+        <h5 class="title">Pages</h5>
+        <!-- Sidebar navigation -->
+          <nav>
+            <ul id="navi">
+              <li><a href="#" ng-click="visible('generalInformation')">General</a></li>
+              <li><a href="#" ng-click="visible('themeInformation')">Theme</a></li>
+              <li><a href="#" ng-click="visible('bannerInformation')">Banners</a></li>
+              <li><a href="#" ng-click="visible('footerInformation')">Footer</a></li>
+            </ul>
+          </nav>
+
+      </div>
+
+      <!-- Main bar General-->
+      <div class="col-md-9 col-sm-9" >
+	<div id="generalInformation" class="invisibletab">
+          <h5 class="title">Company information</h5>
+
+          <div class="form form-small">
+                                      <!-- Edit profile form (not working)-->
+                                      <form class="form-horizontal">
+                                          <!-- Name -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="name1">Business Name</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.name" id="name1" placeholder="Business Name">
+                                            </div>
+                                          </div>
+                                           <!-- Name -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="name1">Tagline</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.tagline" id="name1" placeholder="Mention your tagline">
+                                            </div>
+                                          </div>
+                                             
+                                          <!-- Email -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="email1">Email</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.email" id="email1" placeholder="Official email address" >
+                                            </div>
+                                          </div>
+                                          <!-- Telephone -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="telephone">Telephone</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.telephone" id="telephone" placeholder="Telephone">
+                                            </div>
+                                          </div>  
+                                          <!-- Address -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="address">Address</label>
+                                            <div class="col-md-6">
+                                              <textarea class="form-control" rows="5" id="address" ng-model="shopInfo.address" placeholder="Address"></textarea>
+                                            </div>
+                                          </div>                           
+                                          <!-- Country -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2">Country</label>
+                                            <div class="col-md-3">                               
+                                                <select class="form-control" ng-model="shopInfo.country">
+                                                <option value=""> --- Please Select --- </option>
+                                          <option value="India">India</option>
+                                                        <option value="Netherlands">Netherlands</option>
+                                                        <option value="USA">United States</option>
+                                                </select>  
+                                            </div>
+                                          </div>  
+                                          <!-- State -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="city">State</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.state" id="state" placeholder="State">
+                                            </div>
+                                          </div>                                               
+                                          <!-- City -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="city">City</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.city"  id="city" placeholder="City">
+                                            </div>
+                                          </div>                                                                                                                                         
+                                          <!-- Zipcode -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="zipcode">Zip code</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.zipcode" id="zipcode" placeholder="Zip code">
+                                            </div>
+                                          </div>
+                                          <!-- web site -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="website">Web site</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.website" id="website" placeholder="Web site">
+                                            </div>
+                                          </div>
+                                          <!-- Buttons -->
+                                          <div class="form-group">
+                                             <!-- Buttons -->
+											 <div class="col-md-6 col-md-offset-2">
+												<button type="submit" ng-click="saveFooter(shopInfo);" class="btn btn-default">Update</button>
+											 </div>
+                                          </div>
+                                      </form>
+                                    </div>
+</div>
+<!-- Footer information -->
+<div id="footerInformation" class="invisibletab">
+          <h5 class="title">Footer information</h5>
+
+          <div class="form form-small">
+                                      <!-- Edit profile form (not working)-->
+                                      <form class="form-horizontal">
+                                      <!-- About us -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="aboutus">About us</label>
+                                            <div class="col-md-6">
+                                              <textarea class="form-control" ng-model="shopInfo.aboutus" rows="5" id="aboutus" placeholder="About us information"></textarea>
+                                            </div>
+                                          </div>                              
+                                          <!-- Buttons -->
+                                          <div class="form-group">
+                                             <!-- Buttons -->
+											 <div class="col-md-6 col-md-offset-2">
+												<button type="submit" ng-click="saveFooter(shopInfo);" class="btn btn-default">Update</button>
+											 </div>
+                                          </div>
+                                      </form>
+                                    </div>
+</div>
+<!-- Footer information End-->
+
+<!-- Banner information -->
+<div id="bannerInformation" class="invisibletab">
+          <h5 class="title">Banners</h5>
+
+          <div class="crudtables">
+          <crud-table api='Banner' merchant='{{User.merchantId}}' uploadimage="true" cols='[{"name":"text"},{"info":"text"},{"image":"text"},{"active":"boolean"}]'></crud-table>
+		</div>
+
+</div>
+<!-- Banner information End-->
+
+
+<!-- Banner information -->
+<div id="themeInformation" class="invisibletab">
+          <h5 class="title">Theme</h5>
+<form class="form-horizontal">
+   						 <!-- Primary Color -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="primaryColor">Primary color</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.style.primaryColor"  id="primaryColor" placeholder="#293E6A">
+                                            </div>
+                                          </div>                                                                                                                                         
+                                          <!-- Secondary color -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="secondaryColor">Secondary Color</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.style.secondaryColor" id="secondaryColor" placeholder="#3B5998">
+                                            </div>
+                                          </div>
+                                          
+                                          <!-- Footer background color -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="secondaryColor">Footer background</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.style.footerBackgroundColor" id="footerBackgroundColor" placeholder="#3B5998">
+                                            </div>
+                                          </div>
+                                      
+                              </form>        
+
+
+</div>
+<!-- Banner information End-->
+
+
+      </div>                                                                    
+<!-- General information End-->
+
+    </div>
+  </div>
+</div>
+
+

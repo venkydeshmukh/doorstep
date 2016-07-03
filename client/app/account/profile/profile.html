@@ -1,0 +1,129 @@
+<link href="../../site/site.css" rel="stylesheet">
+<!-- Edit profile -->
+
+<div class="items">
+  <div class="container">
+    <div class="row">
+
+      <!-- Main bar General-->
+      <div class="col-md-12 col-sm-12" >
+	<div >
+          <h5 class="title">My profile</h5>
+
+          <div class="form form-small">
+                                      <!-- Edit profile form (not working)-->
+                                      <form class="form-horizontal">
+                                          <!-- Name -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="name1">Name</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="userProfile.name" id="name1" placeholder="Your name">
+                                            </div>
+                                          </div>   
+                                          <!-- Email -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="email1">Email</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="userProfile.email" id="email1" placeholder="Official email address" >
+                                            </div>
+                                          </div>
+                                          <!-- Telephone -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="telephone">Mobile Number</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="userProfile.mobileNumber" id="mobileNumber" placeholder="Mobile number">
+                                            </div>
+                                          </div>  
+                                          <div ng-repeat="kf in userProfile.address track by $index">
+                                          <!-- Address -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="address">Address</label>
+                                            <div class="col-md-6">
+                                              <textarea class="form-control" rows="5" id="address" ng-model="userProfile.address[$index].address" placeholder="Address"></textarea>
+                                            </div>
+                                          </div>                           
+                                          <!-- Country -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2">Country</label>
+                                            <div class="col-md-3">                               
+                                                <select class="form-control" ng-model="userProfile.address[$index].country">
+                                                <option value=""> --- Please Select --- </option>
+                                          <option value="India">India</option>
+                                                        <option value="Netherlands">Netherlands</option>
+                                                        <option value="USA">United States</option>
+                                                </select>  
+                                            </div>
+                                          </div>  
+                                          <!-- State -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="city">State</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="userProfile.address[$index].state" id="state" placeholder="State">
+                                            </div>
+                                          </div>                                               
+                                          <!-- City -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="city">City</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="userProfile.address[$index].city"  id="city" placeholder="City">
+                                            </div>
+                                          </div>                                                                                                                                         
+                                          <!-- Zipcode -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="zipcode">Zip code</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="userProfile.address[$index].zipcode" id="zipcode" placeholder="Zip code">
+                                            </div>
+                                          </div>
+                                          </div>
+                                          <!-- Buttons -->
+                                          <div class="form-group">
+                                             <!-- Buttons -->
+											 <div class="col-md-6 col-md-offset-2">
+												<button type="submit" ng-click="update(userProfile);" class="btn btn-default">Update</button>
+											 </div>
+                                          </div>
+                                      </form>
+                                    </div>
+</div>
+
+
+<!-- Banner information -->
+<div id="themeInformation" class="invisibletab">
+          <h5 class="title">Theme</h5>
+<form class="form-horizontal">
+   						 <!-- Primary Color -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" for="primaryColor">Primary color</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.style.primaryColor"  id="primaryColor" placeholder="#293E6A">
+                                            </div>
+                                          </div>                                                                                                                                         
+                                          <!-- Secondary color -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="secondaryColor">Secondary Color</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.style.secondaryColor" id="secondaryColor" placeholder="#3B5998">
+                                            </div>
+                                          </div>
+                                          
+                                          <!-- Footer background color -->
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2"  for="secondaryColor">Footer background</label>
+                                            <div class="col-md-6">
+                                              <input type="text" class="form-control" ng-model="shopInfo.style.footerBackgroundColor" id="footerBackgroundColor" placeholder="#3B5998">
+                                            </div>
+                                          </div>
+                                      
+                              </form>        
+
+
+</div>
+
+
+      </div>                                                                    
+    </div>
+  </div>
+</div>
+
+
